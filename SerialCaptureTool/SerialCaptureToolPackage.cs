@@ -209,7 +209,7 @@ namespace Intel.SerialCapture
       outWindow.CreatePane(ref customGuid, customTitle, 1, 1);
       outWindow.GetPane(ref customGuid, out customPane);
       customPane.Activate(); // Brings this pane into view
-      OutputStatus("Initializing Serial OutputString " + DateTime.Now + "\n");
+      OutputStatus("Initializing Serial Capture " + DateTime.Now + "\n");
 
       // Get the Output window so we can pop it later when the user starts serial capture
       EnvDTE.DTE dte = (EnvDTE.DTE)this.GetService(typeof(EnvDTE.DTE));
@@ -254,7 +254,7 @@ namespace Intel.SerialCapture
         Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
                    0,
                    ref clsid,
-                   "Serial OutputString Tool",
+                   "Serial Capture Tool",
                    string.Format(CultureInfo.CurrentCulture, "Unable to open {0}. {0} is open by another program.", port.PortName),
                    string.Empty,
                    0,
@@ -292,7 +292,7 @@ namespace Intel.SerialCapture
             Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
               0,
               ref clsid,
-              "Serial OutputString Tool",
+              "Serial Capture Tool",
               string.Format(CultureInfo.CurrentCulture, "{0} already exists, whould you like to overwrite it.",
                             LoggingOptions.FileName),
               string.Empty,
@@ -326,7 +326,7 @@ namespace Intel.SerialCapture
         Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
                    0,
                    ref clsid,
-                   "Serial OutputString Tool",
+                   "Serial Capture Tool",
                    string.Format(CultureInfo.CurrentCulture, "Unable to open {0}. {0} is open by another program.", LoggingOptions.FileName),
                    string.Empty,
                    0,
@@ -357,7 +357,7 @@ namespace Intel.SerialCapture
         if (!TryOpenFile()) return; 
       }
 
-      OutputStatus("Starting Serial OutputString " + DateTime.Now + "\n");
+      OutputStatus("Starting Serial Capture " + DateTime.Now + "\n");
 
       port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
@@ -381,7 +381,7 @@ namespace Intel.SerialCapture
 
       Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering PauseCapture() of: {0}", this.ToString()));
 
-      OutputStatus("Pausing Serial OutputString " + DateTime.Now + "\n");
+      OutputStatus("Pausing Serial Capture " + DateTime.Now + "\n");
 
       // Stop listing to the port
       if (port != null)
@@ -405,7 +405,7 @@ namespace Intel.SerialCapture
 
       Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering StopCapture() of: {0}", this.ToString()));
 
-      OutputStatus("Stopping Serial OutputString " + DateTime.Now + "\n");
+      OutputStatus("Stopping Serial Capture " + DateTime.Now + "\n");
 
       // Close the SerialPort
       if (port != null)
