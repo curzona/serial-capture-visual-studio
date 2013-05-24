@@ -5,7 +5,7 @@
     <DisplayName>Serial Capture for Visual Studio</DisplayName>
     <Description xml:space="preserve">Serial Capture for Visual Studio adds serial output capture to the Microsoft Visual Studio output window.
 </Description>
-    <License>http://www.apache.org/licenses/LICENSE-2.0.html</License>
+    <License>License.txt</License>
     <Tags >Debug, Serial, RS232, COM</Tags>
   </Metadata>
   <Installation InstalledByMsi="false">
