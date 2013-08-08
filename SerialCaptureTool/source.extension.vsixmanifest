@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="2D3AA110-14D9-4608-9097-B28AE6E57C4F" Version="0.4" Language="en-US" Publisher="Intel" />
+    <Identity Id="2D3AA110-14D9-4608-9097-B28AE6E57C4F" Version="0.5" Language="en-US" Publisher="Intel" />
     <DisplayName>Serial Capture for Visual Studio</DisplayName>
     <Description xml:space="preserve">Serial Capture for Visual Studio adds serial output capture to the Microsoft Visual Studio output window.
 </Description>
